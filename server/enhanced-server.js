@@ -345,6 +345,16 @@ app.get('/api/enrollments/my-courses', auth, (req, res) => {
   }
 });
 
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK', 
+    timestamp: new Date(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
 // Test route
 app.get('/api/test', (req, res) => {
   res.json({ 

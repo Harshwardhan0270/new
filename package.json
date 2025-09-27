@@ -10,7 +10,15 @@
     "server:dev": "cd server && npm run dev",
     "client:dev": "cd client && npm start",
     "build": "cd client && npm run build",
-    "start": "cd server && npm start"
+    "start": "node server/enhanced-server.js",
+    "deploy": "bash scripts/deploy.sh",
+    "update": "bash scripts/update.sh",
+    "backup": "bash scripts/backup.sh",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "heroku:deploy": "git push heroku main"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

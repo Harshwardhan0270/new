@@ -1,0 +1,42 @@
+{
+  "name": "Online Learning Management System",
+  "description": "A comprehensive full-stack learning management system built with React and Node.js",
+  "repository": "https://github.com/yourusername/online-lms",
+  "logo": "https://img.shields.io/badge/LMS-Online%20Learning-blue",
+  "keywords": ["node", "express", "react", "mongodb", "lms", "education"],
+  "image": "heroku/nodejs",
+  "stack": "heroku-20",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
+  "addons": [
+    {
+      "plan": "mongolab:sandbox"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Node.js environment",
+      "value": "production"
+    },
+    "JWT_SECRET": {
+      "description": "Secret key for JWT tokens",
+      "generator": "secret"
+    },
+    "CLIENT_URL": {
+      "description": "Frontend URL",
+      "value": "https://your-app-name.herokuapp.com"
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed successfully!'"
+  }
+}
