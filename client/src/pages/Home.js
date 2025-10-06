@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Box,
@@ -7,33 +6,23 @@ import {
   Grid,
   Card,
   CardContent,
-  Container,
-  Avatar,
-  Chip,
-  useTheme,
-  alpha,
-  Stack,
-  Paper
+  Container
 } from '@mui/material';
-import { 
-  School, 
-  People, 
-  Assessment, 
-  VideoLibrary,
-  TrendingUp,
-  Star,
-  PlayArrow,
-  CheckCircle,
-  ArrowForward
+import {
+  School,
+  People,
+  Assessment,
+  VideoLibrary
 } from '@mui/icons-material';
 
 const Home = () => {
-  const theme = useTheme();
-  
+
   const features = [
     {
       icon: <School fontSize="large" />,
-      titl
+      title: 'Course Management',
+      description: 'Create and manage comprehensive courses with ease'
+    },
     {
       icon: <People fontSize="large" />,
       title: 'Student Enrollment',
